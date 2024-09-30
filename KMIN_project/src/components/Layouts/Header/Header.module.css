@@ -1,0 +1,41 @@
+.header {
+    height: 84px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #EAEAEA;
+    border-bottom: 2px solid #EAEAEA;
+    align-items: center;
+    position: fixed;
+    background-color: #FFFFFF;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+}
+
+.headerLogoContent {
+    margin-left: 10px;
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+.headerButton {
+    margin-right: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.registerButton {
+    background-color: var(--mint-teal);
+    color: #FFFFFF;
+    gap: 12px;
+}
+
+.loginButton {
+    background-color: #EAEAEA;
+    color: var(--mint-teal);
+}
