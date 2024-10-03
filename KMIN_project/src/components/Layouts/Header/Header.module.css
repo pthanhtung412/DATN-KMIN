@@ -39,3 +39,16 @@
     background-color: #EAEAEA;
     color: var(--mint-teal);
 }
+
+.questionSpace {
+    color: #808080;
+    font-weight: 600;
+    padding: 10px 0 10px 15px;
+    border-radius: 30px;
+    background-color: #EAEAEA;
+    width: 40%;
+    position: absolute;
+    top: 50%; /* Đưa phần tử đến giữa chiều dọc */
+    left: 50%; /* Đưa phần tử đến giữa chiều ngang */
+    transform: translate(-50%, -50%); /* Dịch chuyển phần tử để căn giữa chính xác */
+}
