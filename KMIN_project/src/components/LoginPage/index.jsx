@@ -1,7 +1,14 @@
 import clsx from "clsx";
 import styles from "./Login.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/")
+  }
+
   return (
     <>
       <div className={clsx(styles.loginForm)}>
@@ -44,7 +51,7 @@ const Login = () => {
                   />
                 </div>
               </div>
-              <button type="button" className={clsx(styles.loginButton)}>Login</button>
+              <div className={clsx("button", styles.loginButton)} onClick={handleLogin}>Login</div>
             </div>
           </div>
         </div>
