@@ -48,7 +48,10 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className={clsx(styles.loginImg)}></div>
+        <div className={clsx(styles.loginImg)}>
+          {/* <div className={clsx(styles.overlay)}>
+          </div> */}
+        </div>
       </div>
     </>
   );

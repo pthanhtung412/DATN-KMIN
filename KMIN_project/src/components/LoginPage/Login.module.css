@@ -47,11 +47,21 @@
 }
 
 .loginImg {
+    /* position: relative; */
     width: 65%;
     height: 100%;
     background-image: url('../../../assets/images/teamwork_coding.jpg');
     background-size: cover;
     background-position: center calc(50% + 80px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(57, 255, 20, 0.5); /* Neon green with 50% opacity */
 }
 
 .inputField {

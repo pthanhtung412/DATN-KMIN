@@ -44,7 +44,37 @@ const Register = () => {
                   />
                 </div>
               </div>
-              <button type="button" className={clsx(styles.loginButton)}>Login</button>
+              <div className={clsx(styles.sheetInputItem)}>
+                <div className="" style={{ width: "100%" }}>
+                  <label htmlFor="password" className={clsx(styles.inputLabel)}>
+                    Password
+                  </label>
+                  <br />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    defaultValue="azako"
+                    className={clsx(styles.inputField)}
+                  />
+                </div>
+              </div>
+              <div className={clsx(styles.sheetInputItem)}>
+                <div className="" style={{ width: "100%" }}>
+                  <label htmlFor="password" className={clsx(styles.inputLabel)}>
+                    Password
+                  </label>
+                  <br />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    defaultValue="azako"
+                    className={clsx(styles.inputField)}
+                  />
+                </div>
+              </div>
+              <button type="button" className={clsx(styles.loginButton)}>Register</button>
             </div>
           </div>
         </div>
