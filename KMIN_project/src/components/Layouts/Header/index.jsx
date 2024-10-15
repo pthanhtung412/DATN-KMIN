@@ -1,11 +1,12 @@
 import clsx from "clsx";
 import { MdPersonAdd } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,  useLocation } from "react-router-dom";
 
 import styles from "./Header.module.css";
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleRegisterClick = () => {
     navigate("/Register");
@@ -14,6 +15,8 @@ const Header = () => {
   const handleLoginClick = () => {
     navigate("/Login");
   };
+  
+  const hideQuestionSpace = location.pathname === "/Login" || location.pathname === "/Register";
 
   return (
     <header className={clsx(styles.header)}>
@@ -21,9 +24,13 @@ const Header = () => {
         <img src="./assets/images/MinDev_logo.png" alt="" />
         <div className={clsx(styles.headerLogoContent)}>Mindev</div>
       </div>
-      <div className={clsx(styles.questionSpace)} id="questionSpace">
-        Questions
-      </div>
+      {
+        !hideQuestionSpace && (
+          <div className={clsx(styles.questionSpace)} id="questionSpace">
+            Questions
+          </div>
+        )
+      }
       <div className={clsx(styles.headerButton)}>
         <div className={clsx("button", styles.registerButton)} onClick={handleRegisterClick}>
           <MdPersonAdd />
