@@ -1,0 +1,60 @@
+.sideBar {
+    height: 100vh;
+    padding-top: 84px;
+    width: 310px;
+    background-color: #EAEAEA;
+    display: flex;
+}
+.leftNavbar {
+    width: 310px;
+    height: 100%;
+    padding-top: 40px ;
+    background-color: white;
+}
+.divTitle {
+    width: 100%;
+    height: 41px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.divRow {
+    text-decoration: none; /* Xóa gạch chân */
+    color: inherit;
+    width: 100%;
+    height: 41px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.iconMenu {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    color: #808080;
+}
+.divRow:hover {
+    color: var(--mint-teal);
+    background-color: var(--light-mint);
+}
+.divRow:hover .iconMenu {
+    color: var(--mint-teal);
+}
+.listTag {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.tagFilter {
+    border-radius: 15px;
+    padding: 2px 10px;
+    background-color: #EAEAEA;
+    color: #808080;
+}
+.iconFilter {
+    margin-right: 2px;
+}

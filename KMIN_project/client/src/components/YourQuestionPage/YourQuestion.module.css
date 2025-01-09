@@ -1,0 +1,85 @@
+.yourQuestionPage {
+    margin: 40px 0 0 30px;
+    position: relative;
+}
+
+.tagContent {
+    font-size: 2rem;
+    /* Adjusted for better scaling */
+    font-weight: 600;
+}
+
+.addQuestionForm {
+    margin-top: 30px;
+    max-width: 650px;
+    width: 70%;
+    background-color: var(--green-neon);
+    color: aliceblue;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Changed for better consistency */
+    font-size: 1rem;
+    /* Adjusted for better readability */
+}
+
+.addQuestionFormRow {
+    margin-top: 10px;
+}
+
+.titleInput {
+    width: 100%;
+    padding: 8px;
+    /* Added padding for better spacing */
+    border-radius: 4px;
+    /* Added for better UX */
+}
+
+.titleInput:focus {
+    border-color: var(--mint-teal);
+    box-shadow: 0 0 0 0.25rem var(--mint-teal);
+}
+
+.titleContent {
+    height: 210px;
+    padding: 8px;
+    /* Added padding for better spacing */
+    border-radius: 4px;
+    /* Added for better UX */
+}
+
+.titleContent:focus {
+    border-color: var(--mint-teal);
+    box-shadow: 0 0 0 0.25rem var(--mint-teal);
+}
+
+.tagsContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: var(--mint-teal);
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 700;
+}
+
+.removeTag {
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #f44336;
+    /* Red color for remove icon */
+}
+
+.removeTag:hover {
+    color: #d32f2f;
+}
