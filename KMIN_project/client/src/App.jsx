@@ -12,6 +12,7 @@ import Login from "./components/LoginPage";
 import Register from "./components/RegisterPage";
 import Tags from "./components/TagsPage";
 import YourQuestion from "./components/YourQuestionPage/indes";
+import PostInfo from "./components/PostInfoPage";
 import "./global.css";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/Register" element={<Register></Register>}></Route>
           <Route path="/Tags" element={<Tags></Tags>}></Route>
           <Route path="/YourQuestion" element={<YourQuestion></YourQuestion>}></Route>
+          <Route path="/PostInfo" element={<PostInfo></PostInfo>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -23,7 +23,7 @@ class TagRepository {
     
     let re = [];
     for (const post_tag of arrPostTag) {
-      const tag = await Tag.findById(post_tag._id);
+      let tag = await Tag.findOne({ _id: post_tag.tags_id })
       re.push(tag);
     }
     

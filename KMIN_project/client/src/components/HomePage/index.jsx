@@ -13,18 +13,46 @@ import {
   faArrowUp, // Icon Mũi tên lên (Đánh giá)
 } from "@fortawesome/free-solid-svg-icons";
 import Tags from "../TagsPage/index.jsx";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [listPost, setListPost] = useState([]);
   const [listTag, setListTag] = useState([[]]);
 
-  const getTags = async (postId) => {
+  const handlePostContentClick = (postInfo) => {
+    navigate("/PostInfo", { state: {postInfo}});
+  }
+
+  const getTags = async (postId, index) => {
     try {
-      const response = await fetch()
+      console.log(postId);
+
+      const response = await fetch("http://localhost:5173/api/getTagByPostId", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          posts_id: postId,
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json(); // Chuyển đổi response thành JSON
+        console.log(data);
+        return data;
+      } else {
+        alert("Find tag failed");
+      }
+      // const response = await fetch()
     } catch {
       console.error("Error during get tags:", error);
       alert("An error occurred while getting tags");
     }
+
+    return [];
   };
 
   useEffect(() => {
@@ -39,11 +67,17 @@ const Home = () => {
 
         if (response.ok) {
           const data = await response.json(); // Chuyển đổi response thành JSON
-          setListPost(data);
-          let arrTagOfPost = [[]]
-          data.forEach((item) => {
 
-          })
+          let arrTagOfPost = [[]];
+          // data.forEach((item) => {
+          //   getTags(item._id)
+          // })
+          const tempArrList = [];
+          for (let i = 0; i < data.length; i++) {
+            tempArrList.push(await getTags(data[i]._id, i));
+          }
+          setListPost(data);
+          setListTag(tempArrList);
           console.log(data);
         } else {
           alert("find post failed");
@@ -95,15 +129,11 @@ const Home = () => {
         </div>
       </div>
       <div id="listPost" className={clsx(styles.listOfPost)}>
-        {listPost.map((post) => (
+        {listPost.map((post, index) => (
           <div key={post._id} className={clsx(styles.postItem)}>
             <div
-              style={{
-                color: "var(--mint-teal)",
-                fontSize: "1.5em",
-                textDecoration: "underline",
-                wordWrap: "break-word",
-              }}
+              onClick={() => handlePostContentClick(post)}
+              className={clsx(styles.postTitle)}
             >
               {post.post_title}
             </div>
@@ -111,12 +141,16 @@ const Home = () => {
               style={{
                 wordWrap: "break-word",
                 marginTop: "5px",
+                marginBottom: "5px"
               }}
             >
               {post.post_content}
             </div>
             <div>
-              <div className={clsx(styles.listOfVoteIcon)}>
+              <div className={clsx(styles.listOfTag)}>
+                {listTag[index].map((tag, indexTag) => (
+                  <div className={clsx(styles.tagFilter)} key={tag._id}>{tag.tag_name}</div>
+                ))}
               </div>
               <div className={clsx(styles.listOfVoteIcon)}>
                 <div className={clsx(styles.voteIconContent)}>

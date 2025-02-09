@@ -57,6 +57,11 @@
     color: #808080;
 }
 
+.tagFilter:hover {
+    background-color: #DADADA;
+    transition-delay: 0.1s;
+}
+
 .iconFilter {
     margin-right: 2px;
 }
@@ -65,12 +70,15 @@
     padding: 15px;
     background-color: white;
     border-radius: 0.5em;
-    border: 1px solid #e0e0e0; /* Viền mỏng */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    border: 1px solid #e0e0e0;
+    /* Viền mỏng */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng */
 }
 
 .listOfPost {
-    margin-top: 16px;;
+    margin-top: 16px;
+    ;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -109,4 +117,17 @@
     float: left;
     width: 70%;
     flex-wrap: wrap;
+}
+
+.postTitle {
+    color: var(--mint-teal);
+    font-size: 1.5em;
+    text-decoration: underline;
+    word-wrap: break-word;
+}
+
+.postTitle:hover {
+    color: var(--green-neon);
+    transition-delay: 0.1s;
+    /* color: red; */
 }
