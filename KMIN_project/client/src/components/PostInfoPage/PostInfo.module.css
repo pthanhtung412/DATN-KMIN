@@ -1,0 +1,29 @@
+.postContainer {
+    margin: 40px 45px;
+    display: flex;
+    flex-direction: column; /* Hướng các phần tử theo chiều dọc */
+    gap: 20px; 
+}
+
+.post {
+    background-color: white;
+    border-radius: 0.5em;
+    border: 1px solid #e0e0e0;
+    /* Viền mỏng */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng */
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column; /* Hướng các phần tử theo chiều dọc */
+    gap: 20px; 
+}
+
+.postComment {
+    
+}
+
+.postTitle {
+    color: var(--mint-teal);
+    font-size: 1.5em;
+    word-wrap: break-word;
+}

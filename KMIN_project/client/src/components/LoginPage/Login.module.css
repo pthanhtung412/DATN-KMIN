@@ -1,0 +1,98 @@
+.loginForm {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.loginContent {
+    width: 35%;
+    height: 100%;
+}
+
+.loginSheet {
+    margin: 290px 100px 0 100px;
+    gap: 20px;
+    display: flex; /* Thêm display: flex để gap hoạt động */
+    flex-direction: column; /* Đặt hướng flex nếu cần */
+}
+
+.sheetTitle {
+    color: var(--dark-blue);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.sheetDescription {
+    color: var(--dark-blue);
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.sheetInput {
+    gap: 15px;
+    display: flex; /* Thêm display: flex để gap hoạt động */
+    flex-direction: column; /* Đặt hướng flex nếu cần */
+}
+
+.sheetInputItem {
+    border: 2px solid #EAEAEA;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    padding: 4px 15px 4px 15px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.loginImg {
+    /* position: relative; */
+    width: 65%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(217, 217, 217, 0.1), rgba(11, 206, 178, 0.3)), url('/assets/images/teamwork_coding.jpg');
+    background-size: cover;
+    background-position: center calc(50% + 80px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(57, 255, 20, 0.5); /* Neon green with 50% opacity */
+}
+
+.inputField {
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    padding: 0;
+    color: var(--dark-blue);
+}
+
+.inputLabel {
+    color: #808080;
+    font-size: 12px;
+}
+
+.loginButton {
+    background-color: var(--mint-teal);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginButton:hover {
+    background-color: var(--green-neon); 
+    transition-delay: 0.2s;
+    color: var(--pink-blush);
+}
